@@ -1,0 +1,14 @@
+- Initialize symfony project
+- Dockerize
+- Symfony orm-pack and switch database to mysql
+- Symfony messenger component and configuration
+- Organize code structure for DDD 
+- Define command, query and event buses
+- Create User entity
+- User registration command
+- User details retrieval query
+- Add and configure symfony mailer components
+- Send email notification to User upon registration
+- Expose command and query through endpoints, add routing
+- Write unit tests with complete code coverage
+
