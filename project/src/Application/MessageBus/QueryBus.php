@@ -19,11 +19,12 @@ class QueryBus
 
     /**
      * QueryBus constructor.
-     * @param MessageBusInterface $messageBus
+     * query.bus: autowireable with MessageBusInterface $queryBus
+     * @param MessageBusInterface $queryBus
      */
-    public function __construct(MessageBusInterface $messageBus)
+    public function __construct(MessageBusInterface $queryBus)
     {
-        $this->messageBus = $messageBus;
+        $this->messageBus = $queryBus;
     }
 
     /**

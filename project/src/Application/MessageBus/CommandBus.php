@@ -18,6 +18,7 @@ class CommandBus
 
     /**
      * CommandBus constructor.
+     * command.bus: autowireable with the MessageBusInterface type-hint (because this is the default_bus)
      * @param MessageBusInterface $messageBus
      */
     public function __construct(MessageBusInterface $messageBus)

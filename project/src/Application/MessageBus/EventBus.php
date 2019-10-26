@@ -19,11 +19,12 @@ class EventBus
 
     /**
      * EventBus constructor.
-     * @param MessageBusInterface $messageBus
+     * event.bus: autowireable with MessageBusInterface $eventBus
+     * @param MessageBusInterface $eventBus
      */
-    public function __construct(MessageBusInterface $messageBus)
+    public function __construct(MessageBusInterface $eventBus)
     {
-        $this->messageBus = $messageBus;
+        $this->messageBus = $eventBus;
     }
 
     /**
