@@ -11,7 +11,7 @@ services:
       DATABASE_DRIVER: "mysql"
       DATABASE_SERVER_VERSION: "5.7"
       DATABASE_URL: "mysql://root:root@mysql:3306/skeleton_db"
-      MESSENGER_DSN: "amqp://rabbit:rq123456@queue:5672"
+      MESSENGER_TRANSPORT_DSN: "amqp://rabbit:rq123456@queue:5672"
     command: bash -c "
                 cd ./project &&
                 composer install &&
