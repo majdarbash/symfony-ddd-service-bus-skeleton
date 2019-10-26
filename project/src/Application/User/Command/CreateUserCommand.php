@@ -1,21 +1,39 @@
 <?php
 
+namespace App\Application\User\Command;
 
-namespace App\Domain\User\Event;
+use Symfony\Component\Validator\Constraints as Assert;
 
-class UserCreatedEvent
+
+class CreateUserCommand
 {
+    /**
+     * @Assert\Uuid()
+     * @Assert\NotBlank()
+     */
     private $id;
+
+    /**
+     * @Assert\NotBlank()
+     */
     private $email;
-    private $created_at;
+
+    /**
+     * @Assert\NotBlank()
+     */
     private $full_name;
 
     /**
-     * UserCreatedEvent constructor.
+     * @Assert\NotBlank()
+     */
+    private $created_at;
+
+    /**
+     * CreateUserCommand constructor.
      * @param $id
      * @param $email
-     * @param $created_at
      * @param $full_name
+     * @param $created_at
      */
     public function __construct($id, $email, $full_name, $created_at)
     {
@@ -44,18 +62,19 @@ class UserCreatedEvent
     /**
      * @return mixed
      */
-    public function getCreatedAt()
+    public function getFullName()
     {
-        return $this->created_at;
+        return $this->full_name;
     }
 
     /**
      * @return mixed
      */
-    public function getFullName()
+    public function getCreatedAt()
     {
-        return $this->full_name;
+        return $this->created_at;
     }
+
 
 
 }
